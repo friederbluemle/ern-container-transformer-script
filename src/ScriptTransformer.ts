@@ -43,7 +43,8 @@ export default class ScriptTransformer {
 
     let pathToScript = extra!.scriptPath
     if (pathToScript.startsWith('cauldron://')) {
-      const cauldron = await getActiveCauldron()
+      const localRepoPath = tmp.dirSync({ unsafeCleanup: true }).name
+      const cauldron = await getActiveCauldron({ localRepoPath })
       if (!cauldron) {
         this.throwError('A Cauldron needs to be active for using a script stored in the Cauldron')
       }
