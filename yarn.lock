@@ -724,20 +724,20 @@ end-of-stream@^1.0.0:
   dependencies:
     once "^1.4.0"
 
-ern-cauldron-api@^0.24.4:
-  version "0.24.6"
-  resolved "https://registry.yarnpkg.com/ern-cauldron-api/-/ern-cauldron-api-0.24.6.tgz#f41e1dac109c8a3438b4ff7ac78f59e9e15ca682"
-  integrity sha512-qUuLMv9oP1psDHsVuJTfrtDoCUrut4+qxD/uI3sL27edD+C67SVzZB8yUwkLSI1gncSiBWOPmw2Rce8HEcnwbA==
+ern-cauldron-api@^0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/ern-cauldron-api/-/ern-cauldron-api-0.26.0.tgz#3773efe00111c1bef8d10f4e3e04929fb2b7e99d"
+  integrity sha512-fUlIZGoUXlOS+pyDSOAolrZtvKxdNn3R/6lt8ic135YSey3sRoPSnk/UEG00ezLMMyQnQ+mKaWlIwHXvRHN+5A==
   dependencies:
-    ern-core "0.24.6"
+    ern-core "0.26.0"
     joi "^12.0.0"
     lodash "^4.17.10"
     semver "^5.5.0"
 
-ern-core@0.24.6:
-  version "0.24.6"
-  resolved "https://registry.yarnpkg.com/ern-core/-/ern-core-0.24.6.tgz#049ae271b2b8ffd9ae73675debec91c938b36076"
-  integrity sha512-ZgJayBmur84Po+f+UORuBfPgVQIHwSzFyG0a5Siua7Mbz9lte8/leNJqIUIjoAdVZuohU5KrSqWLk53ImfmwdA==
+ern-core@0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/ern-core/-/ern-core-0.26.0.tgz#a82383e9d46a6f8e1c56224b4b3820c0aaeff44e"
+  integrity sha512-cB3G7v0jthLwmG2YyJMUlRZDUe8qpw+noONFzfUNCR1o3Hqo/dY/yek3paG92+4mdCjV+Q06Em6x4sdLJjB+IQ==
   dependencies:
     archiver "^2.1.1"
     bluebird "^3.5.1"
@@ -757,11 +757,13 @@ ern-core@0.24.6:
     react-native-cli "^2.0.1"
     semver "^5.5.0"
     shelljs "^0.8.2"
-    simple-git "^1.96.0"
+    simple-git "^1.106.0"
     tmp "^0.0.33"
     uuid "^3.3.2"
     xcode-ern "^1.0.10"
     yarn "^1.9.4"
+    yauzl "^2.10.0"
+    yazl "^2.4.3"
 
 es6-mapify@^1.1.0:
   version "1.1.0"
@@ -2086,10 +2088,10 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
 
-simple-git@^1.96.0:
-  version "1.106.0"
-  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-1.106.0.tgz#81024c7c22fafd0c386a2b338031cc60b3568b9c"
-  integrity sha512-LaxKq4X9Om7bb16Cpinc36hT1YLHMM9KDQMSWJVv4Y1TGDEUuZbs+0lAk2JSKkCEO3xFjcMSx5OjvZo+i4eJvQ==
+simple-git@^1.106.0:
+  version "1.107.0"
+  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-1.107.0.tgz#12cffaf261c14d6f450f7fdb86c21ccee968b383"
+  integrity sha512-t4OK1JRlp4ayKRfcW6owrWcRVLyHRUlhGd0uN6ZZTqfDq8a5XpcUdOKiGRNobHEuMtNqzp0vcJNvhYWwh5PsQA==
   dependencies:
     debug "^4.0.1"
 
@@ -2596,7 +2598,7 @@ yauzl@2.4.1:
   dependencies:
     fd-slicer "~1.0.1"
 
-yauzl@^2.7.0:
+yauzl@^2.10.0, yauzl@^2.7.0:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.10.0.tgz#c7eb17c93e112cb1086fa6d8e51fb0667b79a5f9"
   integrity sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
@@ -2608,6 +2610,13 @@ yazl@^2.4.1:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/yazl/-/yazl-2.4.3.tgz#ec26e5cc87d5601b9df8432dbdd3cd2e5173a071"
   integrity sha1-7CblzIfVYBud+EMtvdPNLlFzoHE=
+  dependencies:
+    buffer-crc32 "~0.2.3"
+
+yazl@^2.4.3:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/yazl/-/yazl-2.5.1.tgz#a3d65d3dd659a5b0937850e8609f22fffa2b5c35"
+  integrity sha512-phENi2PLiHnHb6QBVot+dJnaAZ0xosj7p3fWl+znIjBDlnMI2PsZCJZ306BPTFOaHf5qdDEI8x5qFrSOBN5vrw==
   dependencies:
     buffer-crc32 "~0.2.3"
 
