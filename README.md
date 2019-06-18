@@ -25,6 +25,8 @@ Instead of passing the whole configuration on the command line for `--extra/-e`,
 
 To automatically transform the Cauldron generated Containers of a target native application and platform, you can add a transformer entry in the Cauldron in the Container generator configuration object as follow :
 
+**Electrode Native <= 0.31**
+
 ```json
 "transformers": [
   {
@@ -36,9 +38,22 @@ To automatically transform the Cauldron generated Containers of a target native 
 ]
 ```
 
+**Electrode Native >= 0.32**
+
+```json
+"pipeline": [
+  {
+    "name": "script",
+    "extra": {
+      "scriptPath": "[pathToScript]"
+    }
+  }
+]
+```
+
 ### Programmatically
 
-```js
+```typescript
 import ScriptTransformer from 'ern-container-transformer-script'
 const transformer = new ScriptTransformer()
 transformer.transform(
