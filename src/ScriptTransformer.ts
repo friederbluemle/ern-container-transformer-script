@@ -6,6 +6,7 @@ import { getActiveCauldron } from 'ern-cauldron-api'
 
 export interface ScriptTransformerExtra {
   scriptPath: string
+  scriptParams?: string
 }
 
 export default class ScriptTransformer {
@@ -59,7 +60,8 @@ export default class ScriptTransformer {
       shell.chmod('+x', pathToScript)
     }
 
-    const scriptResult = shell.exec(pathToScript, {cwd:containerPath})
+    console.log(`scriptParams: ${extra!.scriptParams}`)
+    const scriptResult = shell.exec(`${pathToScript}${extra!.scriptParams?` ${extra!.scriptParams}`:''}`, {cwd:containerPath})
     if (scriptResult.code !== 0) {
       throw new Error(`Script execution failed with code ${scriptResult.code}`)
     }

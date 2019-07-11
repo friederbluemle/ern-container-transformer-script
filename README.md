@@ -6,6 +6,7 @@ This transformer allows for executing an arbitrary script to transform the Conta
 
 - `containerPath` : Path to the Container to transform
 - `scriptPath` : Path to the script to execute. It can be a local file path (for ex `/Users/username/scripts/myscript.sh`) or a path to a file stored in the Cauldron (for ex `cauldron://scripts/myscript.sh`). It is recommended to use the path to a file stored in the CauldronFor the `scriptPath` (the file needs to be added first to the cauldron through the [cauldron add file](https://native.electrode.io/cli-commands/cauldron-add/file) command).
+- `scriptParams`: Optional parameter(s) to pass on the command line when invoking the script.
 
 ## Notes
 
@@ -32,7 +33,8 @@ To automatically transform the Cauldron generated Containers of a target native 
   {
     "name": "script",
     "extra": {
-      "scriptPath": "[pathToScript]"
+      "scriptPath": "[pathToScript]",
+      "scriptParams": "[params]"
     }
   }
 ]
@@ -45,7 +47,8 @@ To automatically transform the Cauldron generated Containers of a target native 
   {
     "name": "script",
     "extra": {
-      "scriptPath": "[pathToScript]"
+      "scriptPath": "[pathToScript]",
+      "scriptParams": "[params]"
     }
   }
 ]
@@ -63,6 +66,7 @@ transformer.transform(
     /* Extra data specific to this publisher */
     extra?: {
       scriptPath: string,
+      scriptParams?: string
     }
   }
 })
