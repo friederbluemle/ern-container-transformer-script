@@ -1,5 +1,7 @@
 # Script Container Transformer
 
+[![Actions Status][1]][2]
+
 This transformer allows for executing an arbitrary script to transform the Container in some custom way. It supports transformation of both iOS and Android Containers.
 
 ## Inputs
@@ -71,3 +73,6 @@ transformer.transform(
   }
 })
 ```
+
+[1]: https://github.com/electrode-io/ern-container-transformer-script/main/badge.svg
+[2]: https://github.com/electrode-io/ern-container-transformer-script/actions
