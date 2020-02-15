@@ -18,8 +18,8 @@ The script will be executed from the Container directory.
 
 ### With `ern transform-container` CLI command
 
-```bash
-$ ern transform-container --containerPath [pathToContainer] -t script -e '{"scriptPath":"[pathToScript]"}'
+```sh
+ern transform-container --containerPath [pathToContainer] -t script -e '{"scriptPath":"[pathToScript]"}'
 ```
 
 Instead of passing the whole configuration on the command line for `--extra/-e`, it is also possible to use a file path to a json file holding the configuration, or a path to a file stored in the Cauldron. Check out the [ern transform-container](https://native.electrode.io/cli-commands/transform-container) command documentation for more info.
@@ -28,7 +28,7 @@ Instead of passing the whole configuration on the command line for `--extra/-e`,
 
 To automatically transform the Cauldron generated Containers of a target native application and platform, you can add a transformer entry in the Cauldron in the Container generator configuration object as follow :
 
-**Electrode Native <= 0.31**
+#### Electrode Native <= 0.31
 
 ```json
 "transformers": [
@@ -42,7 +42,7 @@ To automatically transform the Cauldron generated Containers of a target native 
 ]
 ```
 
-**Electrode Native >= 0.32**
+#### Electrode Native >= 0.32
 
 ```json
 "pipeline": [
